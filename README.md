@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
@@ -29,3 +30,7 @@ Substitute ios for android if not on a Mac.
 # aiesecbuddy
 AIESEC Buddy Repository App Ionic 3
 >>>>>>> 5ae41177073104042c20948af8eca0b26d8d54fd
+=======
+# AIESEC_Buddy
+AIESEC Buddy App Repository for Ionic 3 framework
+>>>>>>> 74fb809a6b0400b68e0c1f92763c6630b4ffe8de
