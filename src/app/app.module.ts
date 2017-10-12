@@ -10,6 +10,8 @@ import { PlacesPage } from "../pages/places/places";
 import { BuddyPage } from "../pages/buddy/buddy";
 import { TimetablePage } from "../pages/timetable/timetable";
 import { MainMenuPage } from "../pages/mainmenu/mainmenu";
+import {EventsPage} from "../pages/events/events";
+import {SchoolPage} from "../pages/school/school";
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MainMenuPage } from "../pages/mainmenu/mainmenu";
     PlacesPage,
     BuddyPage,
     TimetablePage,
-    MainMenuPage
+    MainMenuPage,
+    EventsPage,
+    SchoolPage
 
   ],
   imports: [
@@ -34,7 +38,9 @@ import { MainMenuPage } from "../pages/mainmenu/mainmenu";
     PlacesPage,
     BuddyPage,
     TimetablePage,
-    MainMenuPage
+    MainMenuPage,
+    EventsPage,
+    SchoolPage
   ],
   providers: [
     StatusBar,
