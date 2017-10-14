@@ -1,10 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Informations About Your Buddy</ion-title>
+    <ion-title>{{  name }} {{ surname }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+  <p> Hi my name is {{ name }} {{ surname }} </p>
+  <p> I am your {{ title }} </p>
+  <button ion-button (click) = onGoBack()> Confirm </button>
 
 </ion-content>

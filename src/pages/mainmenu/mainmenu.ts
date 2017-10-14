@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { BuddyPage} from '../buddy/buddy'
 import {HomePage} from "../home/home";
 import {PlacesPage} from "../places/places";
@@ -7,14 +7,7 @@ import {TimetablePage} from "../timetable/timetable";
 import {EventsPage} from "../events/events";
 import {SchoolPage} from "../school/school";
 
-/**
- * Generated class for the MainMenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
-@IonicPage()
 @Component({
   selector: 'page-mainmenu',
   templateUrl: 'mainmenu.html',
@@ -22,10 +15,16 @@ import {SchoolPage} from "../school/school";
 export class MainMenuPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
   }
 
-  onGoToBuddy(){
-      this.navCtrl.push(BuddyPage);
+  onGoToBuddy(name: string, surname: string, buddy: string){
+      this.navCtrl.push(BuddyPage,
+        {
+          userName:  name,
+          userSurname: surname,
+          userTitle: buddy
+        });
   }
 
   onGoToHome(){
@@ -34,6 +33,7 @@ export class MainMenuPage {
 
   onGoToPlaces(){
       this.navCtrl.push(PlacesPage);
+
   }
 
   onGoToTimetable(){
