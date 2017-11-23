@@ -8,34 +8,10 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item (click)="onGoToBuddy('Robert', 'Pietrzykowski', 'Buddy')">
-      <ion-icon name="body" item-start></ion-icon>
-      Buddy
+    <button ion-item *ngFor="let item of data" (click)="onGoTo(item.id, item)">
+      <ion-icon [name]="item.picture" item-start></ion-icon>
+      <h2>{{item.name}}</h2>
+      <p>{{item.description}}</p>
     </button>
-
-    <button ion-item (click)="onGoToHome()">
-      <ion-icon name="home" item-start></ion-icon>
-      Home Data
-    </button>
-
-    <button ion-item (click)="onGoToSchool()">
-      <ion-icon name="school" item-start></ion-icon>
-      School Data
-    </button>
-
-    <button ion-item (click)="onGoToTimetable()">
-      <ion-icon name="calendar" item-start></ion-icon>
-      Timetable
-    </button>
-
-    <button ion-item (click)="onGoToEvents()">
-      <ion-icon name="bowtie" item-start></ion-icon>
-      Events Nearby
-    </button>
-
-    <button ion-item (click)="onGoToPlaces()">
-      <ion-icon name="planet" item-start></ion-icon>
-      Intresting Places
-    </button>
-
   </ion-list>
+

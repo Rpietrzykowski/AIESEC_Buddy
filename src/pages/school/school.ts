@@ -1,25 +1,17 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
+import { NavParams } from "ionic-angular";
 
-/**
- * Generated class for the SchoolPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
-@IonicPage()
 @Component({
   selector: 'page-school',
-  templateUrl: 'school.html',
+  templateUrl: 'school.html'
 })
-export class SchoolPage {
+export class SchoolPage implements OnInit{
+  data: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navParam: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SchoolPage');
+  ngOnInit() {
+    this.data = this.navParam.get("data");
   }
-
 }

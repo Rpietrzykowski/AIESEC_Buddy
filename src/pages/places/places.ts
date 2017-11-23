@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
+import {Component, OnInit} from '@angular/core';
+import { NavParams } from "ionic-angular";
 
 @Component({
   selector: 'page-places',
-  templateUrl: 'places.html',
+  templateUrl: 'places.html'
 })
-export class PlacesPage {
+export class PlacesPage implements OnInit{
+  data: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navParam: NavParams) {
   }
 
-
+  ngOnInit() {
+    this.data = this.navParam.get("data");
+  }
 }

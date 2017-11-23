@@ -12,6 +12,8 @@ import { TimetablePage } from "../pages/timetable/timetable";
 import { MainMenuPage } from "../pages/mainmenu/mainmenu";
 import {EventsPage} from "../pages/events/events";
 import {SchoolPage} from "../pages/school/school";
+//import { DataServiceProvider } from '../providers/data-service/data-service';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import {SchoolPage} from "../pages/school/school";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +48,8 @@ import {SchoolPage} from "../pages/school/school";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler}// DataServiceProvider,
+
   ]
 })
 export class AppModule {}

@@ -1,13 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>{{  name }} {{ surname }}</ion-title>
+    <ion-title>{{data.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-  <p> Hi my name is {{ name }} {{ surname }} </p>
-  <p> I am your {{ title }} </p>
-  <button ion-button (click) = onGoBack()> Confirm </button>
+  <ion-card *ngFor="let item of data.items">
+
+    <img src="{{item.picture}}"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        {{item.name}}
+      </ion-card-title>
+      <p>
+        {{item.description}}
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon name='call' item-start style="color: #55acee"></ion-icon>
+      {{item.phone_number}}
+    </ion-item>
+
+  </ion-card>
 
 </ion-content>
