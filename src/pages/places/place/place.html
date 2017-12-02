@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{data.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card-content>
+    <img src="{{data.picture}}">
+      <h2>{{data.description}}</h2>
+      <p>{{data.address.street}},{{data.address.city}}</p>
+      <span item-left>{{data.address.longtitude}}</span>
+      <span item-left>{{data.address.lattitude}}</span>
+      <button ion-button full icon-left  item-end (click)="onGoTo(data)">
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+  </ion-card-content>
+</ion-content>
+
+
