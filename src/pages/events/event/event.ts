@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import {NavController, NavParams} from 'ionic-angular';
+import {EventMapPage} from "./event-map/event-map";
 
 
 @Component({
@@ -10,10 +11,14 @@ import { NavParams } from 'ionic-angular';
 export class EventPage implements OnInit{
   data: any;
 
-  constructor(public navParam: NavParams) {
+  constructor(public navParam: NavParams, public navCtrlInst: NavController) {
   }
 
   ngOnInit() {
     this.data = this.navParam.get("data");
+  }
+
+  onGoTo(data: any) {
+      this.navCtrlInst.push(EventMapPage, {"data": data});
   }
 }

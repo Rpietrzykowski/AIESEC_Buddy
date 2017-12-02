@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { BuddyPage} from '../buddy/buddy'
 import {HomePage} from "../home/home";
 import {PlacesPage} from "../places/places";
@@ -7,6 +7,7 @@ import {TimetablePage} from "../timetable/timetable";
 import {EventsPage} from "../events/events";
 import {SchoolPage} from "../school/school";
 import buddyFromDataFile  from "../../data/data_new";
+import {DataProvider} from "../../providers/data/data";
 
 
 @Component({
@@ -18,10 +19,15 @@ export class MainMenuPage implements OnInit{
 
   ngOnInit(){
     this.data = buddyFromDataFile;
+    this.getMessages()
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public dataProviderInst: DataProvider) {
 
+  }
+
+  getMessages(){
+    this.dataProviderInst.getData().subscribe(data => console.log(data));
   }
 
   onGoTo(page:string, data: any){

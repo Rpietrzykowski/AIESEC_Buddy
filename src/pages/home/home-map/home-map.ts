@@ -1,25 +1,54 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component, ElementRef, ViewChild, OnInit} from "@angular/core/";
+import {NavController, NavParams} from "ionic-angular";
 
-/**
- * Generated class for the HomeMapPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+declare var google: any;
 
-@IonicPage()
 @Component({
   selector: 'page-home-map',
-  templateUrl: 'home-map.html',
+  templateUrl: 'home-map.html'
 })
-export class HomeMapPage {
+export class HomeMapPage implements OnInit {
+  @ViewChild('map') mapRef: ElementRef;
+  data: any;
+  map: any;
+  lat: any;
+  long: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  constructor(public navCtrlInst: NavController, public navParamInst: NavParams) {
   }
+
+  ngOnInit() {
+    this.data = this.navParamInst.get("data");
+    this.lat = this.data.address.lattitude;
+    this.long = this.data.address.longtitude;
+    console.log(this.lat, this.long);
+  }
+
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomeMapPage');
+    this.loadMap(this.lat, this.long);
   }
 
+  loadMap(lat, long) {
+    //Location - Lat Long
+    const location = new google.maps.LatLng(lat, long);
+
+    //Map Options
+    const options = {
+      center: location,
+      zoom: 16
+    }
+
+    const map = new google.maps.Map(this.mapRef.nativeElement, options);
+
+    this.addMarker(location, map);
+  }
+
+  addMarker(position, map) {
+    return new google.maps.Marker({
+      position,
+      map
+    })
+  }
 }

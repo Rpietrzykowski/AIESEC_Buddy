@@ -32,8 +32,8 @@ export default [
         "address": {
           "city": "Szczecin",
           "street": "Seledynowa 10",
-          "longtitude": "00",
-          "lattitude": "00"
+          "longtitude": "14.655325",
+          "lattitude": "53.366757"
         },
         "picture": "http://serwer1787851.home.pl/apppics/seledynowa10.png",
         "phone_number": "+48537767537"
@@ -51,9 +51,9 @@ export default [
         "description": "Main teacher name: Marika. Public Transport Nearby: 8,9 60, 53.",
         "address": {
           "city": "Szczecin",
-          "street": "Chobolanska 40",
-          "longtitude": "00.00000",
-          "lattitude": "00.000000"
+          "street": "Seledynowa 50",
+          "longtitude": "14.654844",
+          "lattitude": "53.364547"
         },
         "picture": "http://serwer1787851.home.pl/apppics/szkola_seledynowa.png",
         "phone_number": "+48537767537"

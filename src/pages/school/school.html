@@ -20,10 +20,6 @@
 
     <ion-item>
       <span item-left>{{item.address.street}},{{item.address.city}}</span>
-      <button ion-button icon-left clear item-end>
-        <ion-icon name="navigate"></ion-icon>
-        Start
-      </button>
     </ion-item>
       {{item.description}}
     <ion-item>
@@ -31,6 +27,9 @@
       <h2>{{item.phone_number}}</h2>
     </ion-item>
     <button ion-button color="secondary" full (click)="launchDialer(item.phone_number)" >Call</button>
-
+        <button ion-button full color="primary" (click)="onGoTo(item)">
+      <ion-icon name="navigate"></ion-icon>
+      Navigate
+    </button>
   </ion-card>
 </ion-content>

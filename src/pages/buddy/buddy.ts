@@ -3,6 +3,7 @@ import {NavParams} from "ionic-angular";
 import {CallNumber} from "@ionic-native/call-number";
 
 
+
 @Component({
   selector: 'page-buddy',
   templateUrl: 'buddy.html',
