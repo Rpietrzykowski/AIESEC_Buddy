@@ -14,7 +14,6 @@ import buddyFromDataFile  from "../../data/data_new";
   templateUrl: 'mainmenu.html',
 })
 export class MainMenuPage implements OnInit{
-  // buddyData: {name: string, description: string, picture: string, items: MenuModel[]}[];
   data: any[];
 
   ngOnInit(){

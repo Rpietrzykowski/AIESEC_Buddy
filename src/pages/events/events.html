@@ -4,9 +4,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
-  </ion-card>
+  <ion-content class="card-background-page">
 
+    <ion-card *ngFor="let item of data.items" (click)="onGoTo(item)">
+      <img src="{{item.picture}}"/>
+      <div class="card-title">{{item.name}}</div>
+      <div class="card-subtitle">{{item.time}}, {{item.date}}</div>
+    </ion-card>
 
-</ion-content>
+  </ion-content>
+

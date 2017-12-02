@@ -10,4 +10,27 @@
 
 <ion-content padding>
 
+  <ion-card *ngFor="let item of data.items">
+
+    <img src="{{item.picture}}">
+
+    <ion-item>
+      <h2>{{item.name}}</h2>
+    </ion-item>
+
+    <ion-item>
+      <span item-left>{{item.address.street}},{{item.address.city}}</span>
+      <button ion-button icon-left clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
+      {{item.description}}
+    <ion-item>
+
+      <h2>{{item.phone_number}}</h2>
+    </ion-item>
+    <button ion-button color="secondary" full (click)="launchDialer(item.phone_number)" >Call</button>
+
+  </ion-card>
 </ion-content>

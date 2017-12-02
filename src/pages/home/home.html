@@ -6,5 +6,43 @@
 
 <ion-content padding>
 
+  <ion-card *ngFor="let item of data.items">
 
+    <img src="{{item.picture}}">
+
+    <ion-item>
+      <h2>{{item.name}}</h2>
+    </ion-item>
+
+    <ion-item>
+      <span item-left>{{item.address.street}},{{item.address.city}}</span>
+      <button ion-button icon-left clear item-end>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <h1>Host Contact:</h1>
+        <h2>{{item.description}} : {{item.phone_number}}</h2>
+    </ion-item>
+    <button ion-button color="secondary" full (click)="launchDialer(item.phone_number)" >Call</button>
+
+  </ion-card>
 </ion-content>
+
+
+    <!--"items": [-->
+      <!--{-->
+        <!--"name": "Piechocki Family",-->
+        <!--"description": "Alina",-->
+        <!--"address": {-->
+          <!--"city": "Szczecin",-->
+          <!--"street": "Seledynowa 40",-->
+          <!--"longtitude": "00",-->
+          <!--"lattitude": "00"-->
+        <!--},-->
+        <!--"picture": "home.png",-->
+        <!--"phone_number": "+48515550445"-->
+      <!--}-->
+    <!--]-->

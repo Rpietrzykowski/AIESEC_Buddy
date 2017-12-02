@@ -1,20 +1,22 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>{{data.name}}</ion-title>
+    <ion-title> {{data.name }}</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-  <button ion-button> Monday </button>
-  <button ion-button> Tuesday</button>
-  <button ion-button> Wednesday</button>
-  <button ion-button> Thursday</button>
-  <button ion-button> Friday</button>
-</ion-content>
 
-<ion-footer padding>
-  <p></p>
-</ion-footer>
+  <ion-content class="card-background-page">
+
+    <ion-card *ngFor="let item of data.items">
+      <ion-card-header>
+        <div class="card-title">{{item.name}}</div>
+      </ion-card-header>
+      <ion-card-content>
+       <div class="card-subtitle">{{item.description}}</div>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+
+</ion-content>

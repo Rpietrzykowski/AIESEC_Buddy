@@ -1,10 +1,19 @@
-<ion-header>
+ <ion-header>
   <ion-navbar>
-    <ion-title> {{ places }}</ion-title>
+    <ion-title> {{data.name }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
+  <ion-content class="card-background-page">
+
+    <ion-card *ngFor="let item of data.items" (click)="onGoTo(item)">
+      <img src="{{item.picture}}"/>
+      <div class="card-title">{{item.name}}</div>
+      <div class="card-subtitle">{{item.time}}</div>
+    </ion-card>
+
+  </ion-content>
 
 </ion-content>

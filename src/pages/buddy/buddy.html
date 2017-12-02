@@ -20,10 +20,13 @@
     </ion-card-content>
 
     <ion-item>
-      <ion-icon name='call' item-start style="color: #55acee"></ion-icon>
-      {{item.phone_number}}
+      <ion-icon name='call' item-start style="color: lawngreen"></ion-icon>
+     {{item.phone_number}}
     </ion-item>
+    <button ion-button color="secondary" full (click)="launchDialer(item.phone_number)" >Call</button>
 
   </ion-card>
 
 </ion-content>
+
+

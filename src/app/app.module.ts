@@ -14,6 +14,12 @@ import {EventsPage} from "../pages/events/events";
 import {SchoolPage} from "../pages/school/school";
 //import { DataServiceProvider } from '../providers/data-service/data-service';
 import {HttpModule} from "@angular/http";
+import {EventPage} from "../pages/events/event/event";
+import {CallNumber} from "@ionic-native/call-number";
+import {PlacePage} from "../pages/places/place/place";
+import {PlaceMapPageModule} from "../pages/places/place/place-map/place-map.module";
+import {PlaceMapPage} from "../pages/places/place/place-map/place-map";
+import {GoogleMaps} from "@ionic-native/google-maps";
 
 @NgModule({
   declarations: [
@@ -25,7 +31,11 @@ import {HttpModule} from "@angular/http";
     TimetablePage,
     MainMenuPage,
     EventsPage,
-    SchoolPage
+    SchoolPage,
+    EventPage,
+    PlacePage,
+    PlaceMapPage
+
 
   ],
   imports: [
@@ -43,11 +53,16 @@ import {HttpModule} from "@angular/http";
     TimetablePage,
     MainMenuPage,
     EventsPage,
-    SchoolPage
+    SchoolPage,
+    EventPage,
+    PlacePage,
+    PlaceMapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    CallNumber,
+    GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler}// DataServiceProvider,
 
   ]

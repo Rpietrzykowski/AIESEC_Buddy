@@ -15,7 +15,7 @@ export default [
         "name": "Michał",
         "description": "Buddy - Available from 11:30 to 21:50",
         "picture": "http://serwer1787851.home.pl/apppics/buddy2.png",
-        "phone_number": "+48515509446"
+        "phone_number": "+48537767537"
       }
     ]
 
@@ -31,12 +31,12 @@ export default [
         "description": "Alina",
         "address": {
           "city": "Szczecin",
-          "street": "Seledynowa 40",
+          "street": "Seledynowa 10",
           "longtitude": "00",
           "lattitude": "00"
         },
-        "picture": "home.png",
-        "phone_number": "+48515550445"
+        "picture": "http://serwer1787851.home.pl/apppics/seledynowa10.png",
+        "phone_number": "+48537767537"
       }
     ]
   },
@@ -55,8 +55,8 @@ export default [
           "longtitude": "00.00000",
           "lattitude": "00.000000"
         },
-        "picture": "home.png",
-        "phone_number": "+48515550445"
+        "picture": "http://serwer1787851.home.pl/apppics/szkola_seledynowa.png",
+        "phone_number": "+48537767537"
       }
     ]
   },
@@ -68,8 +68,30 @@ export default [
     "items": [
       {
         "name": "Monday",
-        "description": "4A ",
-      }
+        "description": "4A  016  08:30 - 9:15 4B  016  9:20 - 10:05 1A  016  10:15 - 11:00 2A  016  11:30 - 12:15"
+
+      },
+      {
+        "name": "Tuesday",
+        "description": "4A  016  08:30 - 9:15 4B  016  9:20 - 10:05 1A  016  10:15 - 11:00 2A  016  11:30 - 12:15"
+
+
+      },
+      {
+        "name": "Wednesday",
+        "description": "4A  016  08:30 - 9:15 4B  016  9:20 - 10:05 1A  016  10:15 - 11:00 2A  016  11:30 - 12:15"
+
+      },
+      {
+        "name": "Thursday",
+        "description": "4A  016  08:30 - 9:15 4B  016  9:20 - 10:05 1A  016  10:15 - 11:00 2A  016  11:30 - 12:15"
+
+      },
+      {
+        "name": "Friday",
+        "description": "4A  016  08:30 - 9:15 4B  016  9:20 - 10:05 1A  016  10:15 - 11:00 2A  016  11:30 - 12:15"
+
+      },
     ]
 
   },
@@ -88,7 +110,7 @@ export default [
           "longtitude": "00.00000",
           "lattitude": "00.000000"
         },
-        "picture": "picture.png",
+        "picture": "http://serwer1787851.home.pl/apppics/lcm1.png",
         "date": "10.12.2017r",
         "time": "18:00"
       },
@@ -96,12 +118,12 @@ export default [
         "name": "ESSA SA",
         "description": "Our super cool LCM. Place where you can meet pepole who are active members of our organization.",
         "address": {
-          "city": "Szczecin",
-          "street": "Wojska Polskiego 40",
+          "city": "Bukowe",
+          "street": "Seledynowa 10",
           "longtitude": "00.00000",
           "lattitude": "00.000000"
         },
-        "picture": "picture.png",
+        "picture": "http://serwer1787851.home.pl/apppics/lcm1.png",
         "date": "10.12.2017r",
         "time": "18:00"
       }
@@ -110,9 +132,20 @@ export default [
   {
     "id": "id_places",
     "name": "Places",
-    "description": "Intresting places nearby your Host Familly",
+    "description": "Intresting places in Szczecin",
     "picture": "map",
     "items": [
+      {
+        "name": "Brama Królewska",
+        "description": "E. Wedel Chocolate Shop",
+        "address": {
+          "city": "Szczecin",
+          "street": "plac Hołdu Pruskiego 8",
+          "longtitude": "14.556713",
+          "lattitude": "53.428374"
+        },
+        "picture": "http://serwer1787851.home.pl/apppics/brama_krolewska.png",
+      },
       {
         "name": "Brama Portowa",
         "description": "Main place for meeting pepole in the area.",
@@ -122,7 +155,18 @@ export default [
           "longtitude": "00.00000",
           "lattitude": "00.000000"
         },
-        "picture": "picture.png",
+        "picture": "http://serwer1787851.home.pl/apppics/brama_portowa.png",
+      },
+      {
+        "name": "Red City Hall",
+        "description": "Red City Hall bulding",
+        "address": {
+          "city": "Szczecin",
+          "street": "plac Stefana Batorego 4",
+          "longtitude": "14.552014",
+          "lattitude": "53.422010"
+        },
+        "picture": "http://serwer1787851.home.pl/apppics/czerwony_urzad.png",
       }
     ]
   }
