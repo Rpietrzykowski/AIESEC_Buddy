@@ -23,6 +23,7 @@ import {HomeMapPage} from "../pages/home/home-map/home-map";
 import {SchoolMapPage} from "../pages/school/school-map/school-map";
 import {EventMapPage} from "../pages/events/event/event-map/event-map";
 import {DataProvider} from '../providers/data/data';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,9 @@ import {DataProvider} from '../providers/data/data';
     CallNumber,
     GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    DataProvider// DataServiceProvider,
+    DataProvider,
+    AuthServiceProvider
+
 
   ]
 })
